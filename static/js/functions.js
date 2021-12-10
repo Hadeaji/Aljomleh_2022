@@ -402,12 +402,12 @@ function cartclose() {
     document.getElementById("sitebar-drawar").classList.remove('hide-drawer');
 }
 // open modal
-function openModal() {
-    document.getElementById("product-details-popup").classList.add('open-side');
+function openModal(id) {
+    document.getElementById(`product-details-popup-${id}`).classList.add('open-side');
 }
 
-function closeModal() {
-    document.getElementById("product-details-popup").classList.remove('open-side');
+function closeModal(id) {
+    document.getElementById(`product-details-popup-${id}`).classList.remove('open-side');
 }
 
 // open signup form

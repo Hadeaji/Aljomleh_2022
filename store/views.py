@@ -9,7 +9,6 @@ import datetime
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .serializers import *
 
 
 
@@ -129,11 +128,4 @@ def wishlist(request):
     
     context = {"wishlist":wishlist,'customer':customer}
     return render(request, 'store/wishlist.html', context)
-
-@api_view(['GET'])
-def product_details(request):
-    product = Product.objects.get(id = 1)
-    serializer = ProductSerializer(product, many=False)
-    return Response(serializer.data)
-
 
